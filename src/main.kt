@@ -1,4 +1,4 @@
-fun main() {
+class Quiz {
     val question1 = Question(
         "Речка спятила с ума - По домам пошла сама. ___",
         "водопровод",
@@ -14,9 +14,34 @@ fun main() {
         28,
         Difficulty.HARD
     )
-    println(question1.answer)
-    println(question2.answer)
-    println(question3.answer)
+    companion object StudentProgress {
+        var total: Int = 10
+        var answered: Int = 3
+    }
+}
 
-    println(question1.toString())
+fun main() {
+//    val question1 = Question(
+//        "Речка спятила с ума - По домам пошла сама. ___",
+//        "водопровод",
+//        Difficulty.MEDIUM
+//    )
+//    val question2 = Question(
+//        "Небо зелёное. Правда или ложь",
+//        false,
+//        Difficulty.EASY
+//    )
+//    val question3 = Question(
+//        "Сколько дней между полнолуниями?",
+//        28,
+//        Difficulty.HARD
+//    )
+//    println(question1.answer)
+//    println(question2.answer)
+//    println(question3.answer)
+//    println()
+//    println(question1.toString())
+//    println()
+//    println("${StudentProgress.answered} of ${StudentProgress.total} answered.")
+    println("${Quiz.answered} of ${Quiz.total} answers.")
 }
